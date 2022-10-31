@@ -7,4 +7,4 @@ path = ARGV[0]
 fail "specify filename to create" unless path
 File.open(path, "w") { |f| f.puts "#!/usr/bin/env ruby" }
 File.chmod(0755, path) #make the file executable
-system ("code", path) #opens the file in a new VS Code window
+system "code", path #opens the file in a new VS Code window
